@@ -3,10 +3,9 @@
       <md-table v-model="users" :table-header-color="tableHeaderColor">
         <md-table-row slot="md-table-row" slot-scope="{ item }">
           <md-table-cell md-label="ID">{{ item.ID }}</md-table-cell>
-          <md-table-cell md-label="Data">{{ item.data }}</md-table-cell>
-          <md-table-cell md-label="DFI">{{ item.dfi }}</md-table-cell>
-          <md-table-cell md-label="CFI">{{ item.cfi }}</md-table-cell>
-          <md-table-cell md-label="Excel">{{ item.excel }}</md-table-cell>
+          <md-table-cell md-label="CFI">{{ item.ID }}.MA_esti_overal</md-table-cell>
+          <md-table-cell md-label="Final_graphs">{{ item.ID }}</md-table-cell>
+          <md-table-cell md-label="Difference between CFI and TTC">{{ item.ID }}</md-table-cell>
         </md-table-row>
       </md-table>
     </div>
@@ -26,14 +25,22 @@
         selected: [],
         users: [
           {
-            ID: "1",
-            data: "60.8kg",
-            dfi: "@/",
-            cfi: "image",
-            excel:"",
+            ID: "5070",
           },
           {
-            ID: "2",
+            ID: "5071",
+          },
+          {
+            ID: "5072",
+          },
+          {
+            ID: "5073",
+          },
+          {
+            ID: "5144",
+          },
+          {
+            ID: "5146",
           },
         
         ],

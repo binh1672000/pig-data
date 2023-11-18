@@ -44,11 +44,7 @@ export default {
   
   data() {
     return {
-      documentationLink:
-        "https://creativetimofficial.github.io/vue-material-dashboard/documentation",
-      shareUrl: "https://www.creative-tim.com/product/vue-material-dashboard",
-      buyUrl: "",
-      freeUrl: "https://www.creative-tim.com/product/vue-material-dashboard",
+
       isOpen: false,
       sidebarColors: [
         { color: "purple", active: false },

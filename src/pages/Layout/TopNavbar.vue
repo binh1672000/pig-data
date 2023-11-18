@@ -42,10 +42,6 @@
                     </md-button>
                     <ul class="dropdown-menu dropdown-menu-right">
                       <li><a href="#">1 con bi benh</a></li>
-                      <li><a href="#">2 con bi benh</a></li>
-                      <li><a href="#">3 con bi benh</a></li>
-                      <li><a href="#">4 con bi benh</a></li>
-                      <li><a href="#">5 con bi benh</a></li>
                     </ul>
                   </drop-down>
                 </div>

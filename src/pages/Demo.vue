@@ -5,16 +5,17 @@
             <md-card>
 
                 <md-card-content>
-
-                    <vueper-slides ref="vueperslides1" :touchable="false" fade :autoplay="false" :bullets="false" @slide="$refs.vueperslides2.goToSlide($event.currentSlide.index, { emit: false })" fixed-height="780px" >
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
-                        </vueper-slide>
-                    </vueper-slides>
-
-                    <vueper-slides class="no-shadow thumbnails" ref="vueperslides2" @slide="$refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })" :visible-slides="slides.length" fixed-height="75px" :bullets="false" :touchable="false" :gap="2.5" :arrows="false">
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image" @click.native="$refs.vueperslides2.goToSlide(i)">
-                        </vueper-slide>
-                    </vueper-slides>
+                    <button @click="NextImg">next image</button>
+                    <ul>
+                        <li>{{url}}</li>
+                        <li>{{images[index]}}</li>
+                    </ul>
+                    <div class="img-box">
+                        <transition>
+                            <img v-show="isLoadCFI" :src="url" @load="loaded">
+                        </transition>
+                        <div v-show="!isLoadCFI" class="loading">Loading...</div>
+                    </div>
                 </md-card-content>
             </md-card>
         </div>
@@ -23,57 +24,38 @@
 </template>
 
 <script>
-
-import {
-    VueperSlides,
-    VueperSlide
-} from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
 export default {
-    components: {
-        VueperSlides,
-        VueperSlide
-    },
     data() {
         return {
-            slides: [{
-                    image: require("@/assets/img/hinhanh/1 (1).png"),
-                },
-                {
-                    image: require("@/assets/img/hinhanh/1 (3).png"),
-                },
-                {
-                    image: require("@/assets/img/hinhanh/1 (3).png"),
-                }
-            ]
+            url: "",
+            images: [
+                require("@/assets/img/Step1_graphs/Missing row/CFI/1.5070.ki=1.CFI_MA_esti.png"),
+                require("@/assets/img/Step1_graphs/Missing row/CFI/15.5252.ki=1.CFI_MA_esti.png"),
+        ],
+            index: 0,
+            isLoadCFI: false,
         };
-
     },
-
+    created() {
+        this.NextImg();
+        this.preImg();
+    },
+    mounted() {
+        this.loadImages();
+    },
+    methods: {
+        NextImg() {
+            this.isLoadCFI = false
+            this.$nextTick(() => {
+                this.url = this.images[this.index];
+                this.index = (this.index < this.images.length - 1) ? this.index + 1 : 0
+            })
+        },
+     
+        loaded() {
+            this.isLoadCFI = true
+        }
+    },
 };
 </script>
 
-<style>
-image {
-    height: 20px;
-}
-
-.thumbnails {
-    margin: auto;
-    max-width: 300px;
-}
-
-.thumbnails .vueperslide {
-    box-sizing: border-box;
-    border: 1px solid #fff;
-    transition: 0.3s ease-in-out;
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.thumbnails .vueperslide--active {
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    opacity: 1;
-    border-color: #000;
-}
-</style>
