@@ -8,7 +8,7 @@
 
                 </md-card-header>
                 <md-card-content>
-                    <button @click="NextImg">next image</button>
+                    <button @click="NextImg">Next image</button>
                    
                     <ul>
                         <li>{{url}}</li>

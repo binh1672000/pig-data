@@ -1,8 +1,11 @@
 <template>
 <div class="content">
-
     <div class="md-layout-item">
         <md-card>
+            <md-card-header data-background-color="green">
+                    <h4 class="title">Show estimating missing data</h4>
+
+                </md-card-header>
             <md-card-content>
                 <button @click="NextImg">Next Image</button>
                 <ul>
@@ -30,9 +33,6 @@ import {
 } from "@/components";
 
 export default {
-    components: {
-
-    },
     data() {
         return {
             url: "",

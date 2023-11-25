@@ -1,31 +1,32 @@
 <template>
 <div class="content">
-    <div class="md-layout">
-        <md-card-content>
-            <button @click="NextImg">Next CFI</button>
-            <ul>
-                <li>{{isLoadCFI}}</li>
-            </ul>
-            <div class="img-box">
-                <transition>
-                    <img v-show="isLoadCFI" :src="url" @load="loaded" height="20%">
-                </transition>
-                <div v-show="!isLoadCFI" class="loading">Loading...</div>
-            </div>
-        </md-card-content>
-        <md-card-content>
-            <button @click="NextImg">Next DFI</button>
-            <ul>
-                <li>{{isLoadDFI}}</li>
-            </ul>
-            <div class="img-box">
-                <transition>
-                    <img v-show="isLoadDFI" :src="link" @load="loaded" height="20%">
-                </transition>
-                <div v-show="!isLoadDFI" class="loading">Loading...</div>
-            </div>
-        </md-card-content>
-
+    <div class="md-layout-item">
+        <md-card>
+            <md-card-header data-background-color="green">
+                <h4 class="title">Show CFI missing row</h4>
+            </md-card-header>
+            <md-card-content>
+                <button @click="NextImg">Next CFI</button>
+                <div class="img-box">
+                    <transition>
+                        <img v-show="isLoadCFI" :src="url" @load="loaded" height="20%">
+                    </transition>
+                </div>
+            </md-card-content>
+        </md-card>
+        <md-card>
+            <md-card-header data-background-color="green">
+                <h4 class="title">Show DFI missing row</h4>
+            </md-card-header>
+            <md-card-content>
+                <button @click="NextImg">Next DFI</button>
+                <div class="img-box">
+                    <transition>
+                        <img v-show="isLoadDFI" :src="link" @load="loaded" height="20%">
+                    </transition>
+                </div>
+            </md-card-content>
+        </md-card>
     </div>
 </div>
 </template>
@@ -82,7 +83,6 @@ export default {
                 this.index = (this.index < this.images.length - 1) ? this.index + 1 : 0
             })
         },
-
         loaded() {
             this.isLoadCFI = true
             this.isLoadDFI = true

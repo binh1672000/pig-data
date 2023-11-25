@@ -10,24 +10,24 @@
         </sidebar-link>
         <sidebar-link to="/data">
             <md-icon>content_paste</md-icon>
-            <p>DATABASE</p>
+            <p>Database</p>
         </sidebar-link>
         <sidebar-link to="/table">
-            <md-icon>storage</md-icon>
-            <p>MISS DATA</p>
+            <md-icon>image</md-icon>
+            <p>Miss Data</p>
         </sidebar-link>
         <sidebar-link to="/showimage">
-            <md-icon>library_books</md-icon>
-            <p>???? </p>
+            <md-icon>image</md-icon>
+            <p>Estimating missing data </p>
         </sidebar-link>
 
         <sidebar-link to="/test">
-            <md-icon>home</md-icon>
+            <md-icon>image</md-icon>
             <p>Final graphs</p>
         </sidebar-link>
         <sidebar-link to="/demo">
-            <md-icon>home</md-icon>
-            <p>Demo</p>
+            <md-icon>image</md-icon>
+            <p>Image</p>
         </sidebar-link>
 
     </side-bar>
