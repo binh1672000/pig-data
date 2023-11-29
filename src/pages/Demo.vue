@@ -3,7 +3,7 @@
     <div class="md-layout-item">
         <md-card>
             <md-card-header data-background-color="green">
-                <h4 class="title">Show Legend</h4>
+                <h4 class="title">Legend</h4>
             </md-card-header>
             <md-card-content>
                 <button @click="NextImg">Next Legend</button>
@@ -16,7 +16,7 @@
         </md-card>
         <md-card>
             <md-card-header data-background-color="green">
-                <h4 class="title">Show Pertubation Model</h4>
+                <h4 class="title">Pertubation Model</h4>
             </md-card-header>
             <md-card-content>
                 <button @click="NextImg">Next Pertubation Model</button>
@@ -29,7 +29,7 @@
         </md-card>
         <md-card>
             <md-card-header data-background-color="green">
-                <h4 class="title">Show Ratio DFI</h4>
+                <h4 class="title">Ratio DFI</h4>
             </md-card-header>
             <md-card-content>
                 <button @click="NextImg">Next Ratio DFI</button>
@@ -42,7 +42,7 @@
         </md-card>
         <md-card>
             <md-card-header data-background-color="green">
-                <h4 class="title">Show Simulation CFI</h4>
+                <h4 class="title">Simulation CFI</h4>
             </md-card-header>
             <md-card-content>
                 <button @click="NextImg">Next Simulation CFI</button>
@@ -55,7 +55,7 @@
         </md-card>
         <md-card>
             <md-card-header data-background-color="green">
-                <h4 class="title">Show Simulation DFI</h4>
+                <h4 class="title">Simulation DFI</h4>
             </md-card-header>
             <md-card-content>
                 <button @click="NextImg">Next Simulation DFI</button>

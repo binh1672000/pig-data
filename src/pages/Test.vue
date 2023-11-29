@@ -60,13 +60,7 @@ export default {
                 this.index = (this.index < this.images.length - 1) ? this.index + 1 : 0
             })
         },
-        // preImg() {
-        //     this.isLoadCFI = false
-        //     this.$nextTick(() => {
-        //         this.url = this.images[this.index];
-        //         this.index = (this.index > this.images.length + 1) ? this.index + 1 : 0
-        //     })
-        // },
+       
         loaded() {
             this.isLoadCFI = true
         }
