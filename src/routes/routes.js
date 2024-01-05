@@ -54,9 +54,6 @@ const routes = [
         name: "demo",
         component: Demo,
       },
-      
-      
-      
     ],
   },
 ];

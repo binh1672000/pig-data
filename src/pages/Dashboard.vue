@@ -10,7 +10,7 @@
                 </template>
 
                 <template slot="content">
-                    <p class="category">Tổng SỐ CON</p>
+                    <p class="category">Tổng số con</p>
                     <h3 class="title">{{tongsocon}}</h3>
                 </template>
                 <template slot="footer">
@@ -32,7 +32,7 @@
                 </template>
 
                 <template slot="content">
-                    <p class="category">CON BỊ BỆNH</p>
+                    <p class="category">Con bị bệnh</p>
                     <h3 class="title">{{soconbibenh}}</h3>
                 </template>
 
@@ -54,7 +54,7 @@
                 </template>
 
                 <template slot="content">
-                    <p class="category">CON KHỎE MẠNH</p>
+                    <p class="category">Con khỏe mạnh</p>
                     <h3 class="title"> {{ tongsocon-soconbibenh }}
                     </h3>
                 </template>
@@ -76,7 +76,7 @@
                 </template>
 
                 <template slot="content">
-                    <p class="category">MISS DATA</p>
+                    <p class="category">Miss data</p>
                     <h3 class="title">Miss Data
                     </h3>
                 </template>
